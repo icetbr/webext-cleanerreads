@@ -1,0 +1,32 @@
+{
+    "type": "module",
+    "webExt": {
+        "sourceDir": "dist"
+    },
+    "scripts": {
+        "ddv": "run dummy"
+    },
+    "devDependencies": {
+        "@icetbr/rollup-config-webext": "^1.0.0",
+        "@icetbr/eslint-config": "^1.0.0",
+        "@icetbr/run-config": "^1.0.0",
+        "@icetbr/cspell-config": "^1.0.0",
+        "chrome-webstore-upload-cli": "^2.1.0",
+        "cspell": "^6.10.1",
+        "web-ext": "^7.2.0",
+        "@icetbr/utils": "file:projects/utils"
+    },
+    "_contributorDevDependencies": {
+        "@icetbr/utils": "github:icetbr/utils"
+    },
+    "cspell": {
+        "import": [
+            "@icetbr/cspell-config/cspell.json"
+        ],
+        "words": [
+            "cleanerreads",
+            "goodreads",
+            "topbar"
+        ]
+    }
+}
