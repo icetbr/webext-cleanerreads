@@ -23,7 +23,8 @@ Nothing removed, just muted or moved out of the way.
 
 
 ## [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)
-## [License (MIT)](https://choosealicense.com/licenses/mit/)
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 [1]: https://openuserjs.org/users/icetbr/scripts
