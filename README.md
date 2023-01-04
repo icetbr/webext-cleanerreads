@@ -12,14 +12,14 @@ Nothing removed, just muted or moved out of the way.
 
 
 ## Changes
-- sidebar to the right, don't know if it helps much
-- moved top bar (orange, blue) to the sidebar
-- `topbar` non sticky and nearly invisible
-- removed some duplicated elements (user stars, author info)
-- book description always expanded
-- less emphasis on social info and buttons
-- review text centralized on page, poster info moved to the right
-- review text is narrower
+- **sidebar to the right**, don't know if it helps much
+- **top bar to the sidebar,** that orange/purple strip on the top
+- **nav bar nearly invisible** and hidden on scroll
+- **removed duplicated** elements, like user stars, author info
+- **book description** always expanded
+- **less emphasis** on social info and buttons
+- **centralized reviews** on page, user info moved to the left
+- **narrower reviews**, less characters per row
 
 
 [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)\

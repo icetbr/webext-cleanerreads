@@ -12,12 +12,19 @@
 
 /*Want to read and Buy*/
 .BookActions                    { position: absolute; top: 407px; left: 72px; color: var(--color-text-subdued); }
+.BookActions__editActivityButton { display: none; }
+
+/* pencil icon */
+.Button.Button--secondary.Button--medium.Button--block {  margin-left: -4px; }
+.Button.Button--secondary.Button--medium.Button--block span:first-child {  display: none;}
 
 /* top  sticky header as a sidebar */
 .SiteHeaderBanner__topFullImageContainer,
 .siteHeader__topFullImageContainer /* selector for old goodreads design */
  { position: absolute; transform-origin: top right; right: 0; top: 55vw; transform: rotate(90deg); }
 
+ .BookCover__image { width: 187px; } /* resizes large covers to prevent overlap */
+ .ResponsiveImage { max-height: 330px; }
 
  /*****************/
 /*     TOPBAR     */
@@ -37,6 +44,7 @@ input::placeholder              { color: #0000005c; }
 /*****************/
 /*  BOOK DETAILS */
 /*****************/
+.ChoiceAwardBadge                                           { margin-top: 10px; }
 .BookPageMetadataSection__contributor                       { display: none; }     /* hides Author (duplicated) */
 .BookPage__mainContent .TruncatedContent__text--large       { max-height: unset; } /* book description always expanded */
 .BookPageMetadataSection__genrePlainText                    { display: none; }     /* hides "genre" word */
@@ -44,7 +52,7 @@ input::placeholder              { color: #0000005c; }
 .BookPageMetadataSection__genres { margin-bottom: -4px; }
 .WorkDetails { margin-top: 3.2rem; }                        /*  Literary awards */
 .BookDetails .Button__container { top: -4px; left: 376px; }
-.BookDetails .FeaturedDetails { margin-bottom: -3rem; }
+.BookDetails .FeaturedDetails { margin-bottom: -3rem; overflow: clip; }
 
 /* pages count and publish date close together */
 .FeaturedDetails p[data-testid="pagesFormat"] {
@@ -52,16 +60,17 @@ input::placeholder              { color: #0000005c; }
   width: 70px;
   overflow: clip;
   white-space: nowrap;
+  background: white;
 }
 
 /* pages count and publish date close together */
 .FeaturedDetails p[data-testid="publicationInfo"] {
   display: inline-block;
-  margin-left: -1px;
+  margin-left: -93px;
   white-space: nowrap;
   overflow: clip;
-  direction: rtl;
-  width: 94px;
+  z-index: -1;
+  position: relative;
 }
 
 
@@ -75,6 +84,7 @@ div[data-testid="currentlyReadingSignal"] {
   width: 81px;
   overflow: clip;
   white-space: nowrap;
+  position: relative;
 }
 
 div[data-testid="currentlyReadingSignal"]::after {
@@ -85,17 +95,15 @@ div[data-testid="currentlyReadingSignal"]::after {
 }
 
 div[data-testid="toReadSignal"] {
-  display: inline-block;
-  width: 113px;
   overflow: clip;
   white-space: nowrap;
-  margin-left: 5px;
+  position: relative;
 }
 
 div[data-testid="toReadSignal"]::before {
-  content: 'want to read ';
   position: absolute;
-  left: 125px;
+  content: 'want to read\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0';
+  right: -30px;
   background: #fff;
 }
 
@@ -132,6 +140,7 @@ hr.Divider:nth-child(9) { width: 80%; }
 .WriteReviewCTA .Avatar { display: none; }
 .WriteReviewCTA__hero { display: none; } /* What do you Think title */
 #SocialReviews .Text__title3 { display: none; }
+.MyReviewCard { left: -193px; width: 730px;} /* center align review */
 
 .Alert--informational { background-color: unset; }
 .Alert { padding: unset; color: #00000021; text-align: center; }
