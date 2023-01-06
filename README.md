@@ -12,15 +12,16 @@ Nothing removed, just muted or moved out of the way.
 
 
 ## Changes
-- **sidebar to the right**, don't know if it helps much
-- **top bar to the sidebar,** that orange/purple strip on the top
-- **nav bar nearly invisible** and hidden on scroll
-- **removed duplicated** elements, like user stars, author info
+- **sidebar** to the right, don't know if it helps much
+- **topbar** to the sidebar, that orange/purple strip on the top (cut from screenshot, but it's there)
+- **navbar** nearly invisible and hidden on scroll
+- **duplicated elements** removed, like user stars, author info
 - **book description** always expanded
-- **less emphasis** on social info and buttons
-- **centralized reviews** on page, user info moved to the left
-- **narrower reviews**, less characters per row
+- **social info** and buttons with less emphasis
+- **reviews** centralized on page, user info moved to the left
+- **reviews** with less characters per row
 
+**WORKS BEST ON 1920x1080**
 
 [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)\
 [License (MIT)](https://choosealicense.com/licenses/mit/)
