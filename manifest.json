@@ -19,6 +19,7 @@
         "gecko": {
           "id": "webext-webext-cleanerreads@icetbr"
         },
+        "addonIds": ["cleanerreads", "cleanerreads/pfckicghmjgghmoeolegcbccjekhejji"],
         "keywords": ["userstyle", "goodreads", "minimalist"]
     },
 

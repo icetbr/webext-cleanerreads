@@ -26,4 +26,6 @@ Nothing removed, just muted or moved out of the way.
 [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)\
 [License (MIT)](https://choosealicense.com/licenses/mit/)
 
-[1]: https://openuserjs.org/users/icetbr/scripts
+[1]: https://openuserjs.org/scripts/icetbr/CleanerReads_-_A_goodreads.com_Theme
+[2]: https://addons.mozilla.org/en-US/firefox/addon/cleanerreads
+[3]: https://chrome.google.com/webstore/detail/cleanerreads/pfckicghmjgghmoeolegcbccjekhejji
