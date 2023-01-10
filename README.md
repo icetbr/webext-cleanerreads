@@ -8,7 +8,7 @@ Nothing removed, just muted or moved out of the way.
 ![After](media/after.png)
 
 ## Install
-[Userscript][1] - [Firefox][2] - [Chrome][3].
+[Userstyle][4] - [Userscript][1] - [Firefox][2] - [Chrome][3].
 
 
 ## Changes
@@ -29,3 +29,4 @@ Nothing removed, just muted or moved out of the way.
 [1]: https://openuserjs.org/scripts/icetbr/CleanerReads_-_A_goodreads.com_Theme
 [2]: https://addons.mozilla.org/en-US/firefox/addon/cleanerreads
 [3]: https://chrome.google.com/webstore/detail/cleanerreads/pfckicghmjgghmoeolegcbccjekhejji
+[4]: https://userstyles.world/style/8034/cleanerreads-a-goodreads-theme
