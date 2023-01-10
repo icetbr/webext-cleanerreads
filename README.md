@@ -1,5 +1,5 @@
-# CleanerReads - A goodreads.com Theme
-Nothing removed, just muted or moved out of the way.
+# CleanerReads - A Goodreads Theme
+Muting and moving some UI elements in favor of text. Nothing is removed, just rearranged.
 
 ### Before
 ![Before](media/before.png)
