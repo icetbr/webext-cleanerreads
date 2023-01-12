@@ -10,21 +10,21 @@
 .BookPageMetadataSection__ratingStats { position: absolute; right: -314px; top: 344px; }          /* move to the sidebar */
 .RatingStatistics                     { flex-flow: column wrap; align-items: center; }
 
-/*Want to read and Buy*/
-.BookActions                    { position: absolute; top: 407px; left: 72px; color: var(--color-text-subdued); }
+/*[Want to read], [Buy o nAmazon]*/
+.BookActions                     { position: absolute; top: 407px; left: 72px; color: var(--color-text-subdued); }
 .BookActions__editActivityButton { display: none; }
 
 /* pencil icon */
-.Button.Button--secondary.Button--medium.Button--block {  margin-left: -4px; }
-.Button.Button--secondary.Button--medium.Button--block span:first-child {  display: none;}
+.Button.Button--secondary.Button--medium.Button--block                  { margin-left: -4px; }
+.Button.Button--secondary.Button--medium.Button--block span:first-child { display: none;}
 
 /* top  sticky header as a sidebar */
 .SiteHeaderBanner__topFullImageContainer,
 .siteHeader__topFullImageContainer /* selector for old goodreads design */
  { position: absolute; transform-origin: top right; right: 0; top: 1140px; transform: rotate(90deg); }
 
- /* .BookCover__image { width: 187px; } resizes large covers to prevent overlap */
- .ResponsiveImage { max-height: 330px; }
+.ResponsiveImage { max-height: 330px; } /* resizes large covers to prevent overlap */
+
 
  /*****************/
 /*     TOPBAR     */
@@ -42,76 +42,25 @@ input::placeholder              { color: #0000005c; }
 
 
 /*****************/
-/*  BOOK DETAILS */
+/*  MAIN         */
 /*****************/
+
+/* Book Details */
 .ChoiceAwardBadge                                           { margin-top: 10px; }
-.BookPageMetadataSection__contributor                       { display: none; }     /* hides Author (duplicated) */
-.BookPage__mainContent .TruncatedContent__text--large       { max-height: unset; } /* book description always expanded */
-.BookPageMetadataSection__genrePlainText                    { display: none; }     /* hides "genre" word */
+.BookPageMetadataSection__contributor                       { display: none; }         /* hides Author (duplicated) */
+.BookPage__mainContent .TruncatedContent__text--large       { max-height: unset; }     /* book description always expanded */
+.BookPageMetadataSection__genrePlainText                    { display: none; }         /* hides "genre" word */
 
-.BookPageMetadataSection__genres { margin-bottom: -4px; }
-.WorkDetails { margin-top: 3.2rem; }                        /*  Literary awards */
-.BookDetails .Button__container { top: -4px; left: 376px; }
-.BookDetails .FeaturedDetails { margin-bottom: -3rem; overflow: clip; }
-
-/* pages count and publish date close together */
-.FeaturedDetails p[data-testid="pagesFormat"] {
-  display: inline-block;
-  width: 70px;
-  overflow: clip;
-  white-space: nowrap;
-  background: white;
-}
-
-/* pages count and publish date close together */
-.FeaturedDetails p[data-testid="publicationInfo"] {
-  display: inline-block;
-  margin-left: -93px;
-  white-space: nowrap;
-  overflow: clip;
-  z-index: -1;
-  position: relative;
-}
+.BookPageMetadataSection__genres                            { margin-bottom: -4px; }
+.WorkDetails                                                { margin-top: 3.2rem; }    /*  Literary awards */
+.BookDetails .Button__container                             { top: -4px; left: 376px; }
+.BookDetails .FeaturedDetails                               { margin-bottom: -3rem; overflow: clip; display: flex; } /* flex brings pages count and publish date close together */
+.BookDetails + hr.Divider                                   { display: none }
+.FeaturedDetails p + p::before                              { content: ',\00a0'; }     /* spacing in 352 pages, January 19, 2023 */
+.BookDetails__list                                          { margin-top: 35px; }      /* "This Edition" overlaping when fewer details displayed. Ex: https://www.goodreads.com/book/show/60741407-a-christmas-memory */
 
 
-/*****************/
-/* Social Signal */
-/*****************/
-
-/* People reading */
-div[data-testid="currentlyReadingSignal"] {
-  display: inline-block;
-  width: 81px;
-  overflow: clip;
-  white-space: nowrap;
-  position: relative;
-}
-
-div[data-testid="currentlyReadingSignal"]::after {
-  content: 'reading \B7  ';
-  position: absolute;
-  left: 35px;
-  background: #fff;
-}
-
-div[data-testid="toReadSignal"] {
-  overflow: clip;
-  white-space: nowrap;
-  position: relative;
-}
-
-div[data-testid="toReadSignal"]::before {
-  position: absolute;
-  content: 'want to read\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0';
-  right: -30px;
-  background: #fff;
-}
-
-hr.Divider:nth-child(7) { display: none; }
-hr.Divider:nth-child(2) { width: 80%; }
-hr.Divider:nth-child(9) { width: 80%; }
-
-
+/* 1,004 reading · 11.4k want to read */
 .AvatarGroup                          { display: none; }
 .SocialSignalsSection                 { color: var(--color-text-body-light); }
 .SocialSignalCard__caption            { margin-left: unset; }
@@ -120,77 +69,61 @@ hr.Divider:nth-child(9) { width: 80%; }
 .SocialSignalsSection__signal         { margin-right: unset; display: inline-block; }
 
 
-/*****************/
-/* Others */
-/*****************/
-
-.BookPage__reviewsSection { width: 550px; }
-.ReviewsSectionStatistics__histogram { width: unset; }
-.ReviewFilters__filterControl { width: unset; }
-
 /* About Author */
-.PageSection__title { display: none; }
-.PageSection        { margin-top: 20px; width: 550px;}
-.PageSection .DetailsLayoutRightParagraph__widthConstrained {
-   grid-column: span 10;
-}
+.PageSection__title                                         { display: none; }
+.PageSection                                                { margin-top: 20px; width: 550px;}
+.PageSection .DetailsLayoutRightParagraph__widthConstrained { grid-column: span 10; }
+
+
+/*****************/
+/*  REVIEWS      */
+/*****************/
 
 /* My Review */
-.ReviewsSection__header { display: none; }
-.WriteReviewCTA .Avatar { display: none; }
-.WriteReviewCTA__hero { display: none; } /* What do you Think title */
-#SocialReviews .Text__title3 { display: none; }
-.MyReviewCard { left: -193px; width: 730px;} /* center align review */
+.ReviewsSection__header                                               { display: none; }
+.WriteReviewCTA .Avatar                                               { display: none; }
+.WriteReviewCTA__hero                                                 { display: none; }                    /* What do you Think title */
+#SocialReviews .Text__title3                                          { display: none; }
+.MyReviewCard                                                         { left: -193px; width: 730px;}        /* center align review */
 
-.Alert--informational { background-color: unset; }
-.Alert { padding: unset; color: #00000021; text-align: center; }
-.WriteReviewCTA { padding: unset; /*! grid-column-end: 7; */width: 600px;}
-.ReviewsList__listHeader { margin: unset; }
+.Alert--informational                                                 { background-color: unset; }
+.Alert                                                                { padding: unset; color: #00000021; text-align: center; }
+.WriteReviewCTA                                                       { padding: unset; width: 600px;}
+.ReviewsList__listHeader                                              { margin: unset; }
 
-/* Community Reviews */
-#CommunityReviews { display: none } /* hide title */
-.ReviewsSectionStatistics .ReviewsSectionStatistics__ratingStatistics { display: none; } /* hide starts count, already shown on sidebar */
+/* Reviews */
+.BookPage__reviewsSection                                             { width: 550px; }
+.ReviewsSectionStatistics__histogram                                  { width: unset; }
+.ReviewFilters__filterControl                                         { width: unset; }
+#CommunityReviews                                                     { display: none }                     /* hide title */
+.ReviewsSectionStatistics .ReviewsSectionStatistics__ratingStatistics { display: none; }                    /* hide starts count, already shown on sidebar */
 
-/* rating statistics */
-/* .ReviewsSectionStatistics {
-  position: absolute;
-  left: 715px;
-  width: 600px;
-}
+div.ReviewsList:nth-child(1) > div:nth-child(2)                       { position: relative; left: -190px; } /* center align? */
+div.ReviewsList:nth-child(1)                                          { width: 720px; }
 
-.ReviewFilters {
-  position: absolute;
-  left: 715px;
-  width: 600px;
-  top: 1000px;
-}
- */
-div.ReviewsList:nth-child(1) > div:nth-child(2) {
-  position: relative;
-  left: -190px;
-}
+.FeaturedPerson__info                                                 { width: 515px; }
 
-/* more lines of text before Show More button */
-.TruncatedContent__text--large { max-height: 48rem; }
-.TruncatedContent__text--expanded { max-height: none; overflow-y: visible; }
+.TruncatedContent__text--large                                        { max-height: 48rem; }
+.TruncatedContent__text--expanded                                     { max-height: none; overflow-y: visible; }
 
 /* user's reviews */
-.SocialFooter { display: flex }
-.SocialFooter .Button { font-weight: 400; }
-.ReviewCard .Text__title4 { font-weight: 400; }
-div[data-testid="actions"] { margin-left: 15px; margin-top: -1px; }
+.SocialFooter                                                         { display: flex }
+.SocialFooter .Button                                                 { font-weight: 400; }
+.ReviewCard .Text__title4                                             { font-weight: 400; }
+div[data-testid="actions"]                                            { margin-left: 15px; margin-top: -1px; }
 
 
 /*****************/
 /*    COMMON     */
 /*****************/
-
 .Formatted {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
 }
+
+hr.Divider { width: 532px }
 
 /*****************/
 /*    BUTTONS    */
@@ -237,34 +170,7 @@ div[data-testid="actions"] { margin-left: 15px; margin-top: -1px; }
 }
 
 
-.FeaturedPerson__info {
-  width: 515px;
-}
 
-.ReviewsSectionStatistics__histogram {
-  width: unset;
-}
 
-.ReviewFilters__filterControl {
-  width: unset;
-}
 
-.WriteReviewCTA {
-  width: 600px;
-}
 
-.PageSection {
-  width: 550px;
-}
-
-div.ReviewsList:nth-child(1) > div:nth-child(2) {
-  left: -190px;
-}
-
-  .BookPage__reviewsSection {
-  width: 550px;
-}
-
-  div.ReviewsList:nth-child(1) {
-  width: 720px;
-}
