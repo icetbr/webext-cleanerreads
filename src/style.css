@@ -98,8 +98,9 @@ input::placeholder              { color: #0000005c; }
 #CommunityReviews                                                     { display: none }                     /* hide title */
 .ReviewsSectionStatistics .ReviewsSectionStatistics__ratingStatistics { display: none; }                    /* hide starts count, already shown on sidebar */
 
-div.ReviewsList:nth-child(1) > div:nth-child(2)                       { position: relative; left: -190px; } /* center align? */
-div.ReviewsList:nth-child(1)                                          { width: 720px; }
+/* user reviews gravatar to the left, content centered */
+#ReviewsSection div:nth-child(7) > div:nth-child(2)                       { position: relative; left: -190px; }
+#ReviewsSection div:nth-child(7)                                          { width: 720px; }
 
 .FeaturedPerson__info                                                 { width: 515px; }
 
