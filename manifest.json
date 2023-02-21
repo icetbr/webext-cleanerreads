@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "CleanerReads - A Goodreads Theme",
-    "version": "1.0.6",
+    "version": "1.1.1",
 
     "description": "Nothing removed, just muted or moved out of the way.",
     "homepage_url": "https://github.com/icetbr/webext-cleanerreads",

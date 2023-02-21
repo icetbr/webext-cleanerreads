@@ -2,7 +2,7 @@
 /*    SIDEBAR    */
 /*****************/
 .BookPage__leftColumn           { grid-column-start: 10; grid-column-end: 13; }                   /* move to the right */
-.Sticky                         { position: relative !important; top: 15px !important; }
+.BookPage__leftColumn .Sticky   { position: relative !important; top: 15px !important; z-index: unset } /* z-index needed to prevent being in front of profile menu */
 .BookPage__rightColumn          { grid-column-start: 3; grid-column-end: 10; grid-row-start: 1; } /* make non sticky */
 .BookPage__rightColumn          { overflow: unset }                                               /* allows moving content to it */
 .BookActions > .BookRatingStars { display: none }                                                 /* hide Community Rating (duplicated) */
@@ -16,7 +16,7 @@
 
 /* pencil icon */
 .Button.Button--secondary.Button--medium.Button--block                  { margin-left: -4px; }
-.Button.Button--secondary.Button--medium.Button--block span:first-child { display: none;}
+.PencilIcon .Button.Button--secondary.Button--medium.Button--block span:first-child { display: none;}
 
 /* top  sticky header as a sidebar */
 .SiteHeaderBanner__topFullImageContainer,
@@ -53,7 +53,8 @@ input::placeholder              { color: #0000005c; }
 
 .BookPageMetadataSection__genres                            { margin-bottom: -4px; }
 .WorkDetails                                                { margin-top: 3.2rem; }    /*  Literary awards */
-.BookDetails .Button__container                             { top: -4px; left: 376px; }
+/* .BookDetails .Button__container                          { top: -4px; left: 376px; }  messes up the More Editions arrows*/
+[aria-label="Book details and editions"]                    { top: -4px; left: 386px; position: relative; }
 .BookDetails .FeaturedDetails                               { margin-bottom: -3rem; overflow: clip; display: flex; } /* flex brings pages count and publish date close together */
 .BookDetails + hr.Divider                                   { display: none }
 .FeaturedDetails p + p::before                              { content: ',\00a0'; }     /* spacing in 352 pages, January 19, 2023 */
@@ -85,6 +86,7 @@ input::placeholder              { color: #0000005c; }
 .WriteReviewCTA__hero                                                 { display: none; }                    /* What do you Think title */
 #SocialReviews .Text__title3                                          { display: none; }
 .MyReviewCard                                                         { left: -193px; width: 730px;}        /* center align review */
+.MyReviewCardCarousel .DynamicCarousel__itemsArea                     { overflow: unset; }
 
 .Alert--informational                                                 { background-color: unset; }
 .Alert                                                                { padding: unset; color: #00000021; text-align: center; }
@@ -130,7 +132,7 @@ hr.Divider { width: 532px }
 /*****************/
 .BookActions .Button                        { border-radius: unset; font-weight: unset; }
 .BookActions__button                        { margin: unset; width: 100%;}
-.Button--medium                             { padding: unset; height: 2.5rem; /*! width: 100%; */}
+.Button--medium                             { padding: 5px; padding-right: 12px; height: 2.5rem; }
 .Button--wtr                                { background-color: unset; color: unset; }
 .Button--wtr:hover                          { background-color: unset; box-shadow: inset 0 -3px 0 0 var(--color-background-wtr-hover); }
 .Button                                     { transition: unset; border: 0; } /* border-radius: unset; font-weight: unset; */
@@ -168,9 +170,3 @@ hr.Divider { width: 532px }
 .ButtonGroup .Button__container:not(:first-child) .Button:active, .ButtonGroup .Button__container:not(:first-child) .Button--buy:focus {
   box-shadow: inset 0 -3px 0 0 var(--color-text-button-transparent-base);
 }
-
-
-
-
-
-

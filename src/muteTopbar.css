@@ -1,0 +1,6 @@
+/* OLD TOPBAR */
+.siteHeader__topLine       { position: unset; box-shadow: unset; background: unset }
+.siteHeader .siteHeader__topLevelLink, .siteHeader .primaryNavMenu__trigger {  color: #00000021; }
+.siteHeader input          { border: 0.1rem solid #0000; }
+.siteHeader .searchBox__icon--magnifyingGlass { opacity: 0.3; }
+.siteHeader input::placeholder              { color: #0000005c !important; }
