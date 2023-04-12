@@ -1,13 +1,11 @@
 /*****************/
 /*    SIDEBAR    */
 /*****************/
-.BookPage__leftColumn           { grid-column-start: 10; grid-column-end: 13; }                   /* move to the right */
+/* LEFT */
 .BookPage__leftColumn .Sticky   { position: relative !important; top: 15px !important; z-index: unset } /* z-index needed to prevent being in front of profile menu */
-.BookPage__rightColumn          { grid-column-start: 3; grid-column-end: 10; grid-row-start: 1; } /* make non sticky */
-.BookPage__rightColumn          { overflow: unset }                                               /* allows moving content to it */
-.BookActions > .BookRatingStars { display: none }                                                 /* hide Community Rating (duplicated) */
+.BookPage__rightColumn          { overflow: unset }                                                     /* allows moving content to it */
+.BookActions > .BookRatingStars { display: none }                                                       /* hide Community Rating (duplicated) */
 
-.BookPageMetadataSection__ratingStats { position: absolute; right: -314px; top: 344px; }          /* move to the sidebar */
 .RatingStatistics                     { flex-flow: column wrap; align-items: center; }
 
 /*[Want to read], [Buy o nAmazon]*/
@@ -26,9 +24,11 @@
 .ResponsiveImage { max-height: 330px; } /* resizes large covers to prevent overlap */
 
 
- /*****************/
+/*****************/
 /*     TOPBAR     */
 /*****************/
+.NotificationsTray { z-index: 1}  /* prevent being behing content */
+
 /* nearly invisible top navbar */
 .Header                         { position: unset; box-shadow: unset; background: unset; color: #00000021; }
 input::placeholder              { color: #0000005c; }

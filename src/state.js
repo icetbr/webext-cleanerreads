@@ -1,0 +1,16 @@
+export const state = {
+    showCoverOnTheLeft: false,
+    removeBookCoverRoundedCorners: false,
+    makeTextWider: false,
+    CurrentlyReading: false,
+    ReadingChallenge: false,
+    ShelfDisplay: false,
+    UserShelvesBookCounts: false,
+    EditorialBlogThumbnail: false,
+    RecommendationsWidget: false,
+    ChoiceWidget: false,
+    GoogleBannerAd: false,
+    Footer: false,
+    SiteAnnouncement: false,
+    ColoredTopBar: false,
+};

@@ -1,0 +1,4 @@
+.BookPageMetadataSection__description .DetailsLayoutRightParagraph__widthConstrained { width: 690px; }  /* book description */
+.BookPage__mainContent .TruncatedContent:nth-child(3) { width: 700px; }                                 /* author description */
+.MyReviewCard__content { width: 700px; }
+.ReviewCard__content { width: 700px; }

@@ -4,3 +4,4 @@
 .siteHeader input          { border: 0.1rem solid #0000; }
 .siteHeader .searchBox__icon--magnifyingGlass { opacity: 0.3; }
 .siteHeader input::placeholder              { color: #0000005c !important; }
+.siteHeader { position: unset; }

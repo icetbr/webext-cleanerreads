@@ -7,6 +7,9 @@ Muting and moving some UI elements in favor of text. Nothing is removed, just re
 ### After
 ![After](media/after.png)
 
+### Settings
+![After](media/settings.png)
+
 ## Install
 [Userstyle][4] - [Userscript][1] - [Firefox][2] - [Chrome][3].
 
@@ -20,6 +23,10 @@ Muting and moving some UI elements in favor of text. Nothing is removed, just re
 - **social info** and buttons with less emphasis
 - **reviews** centralized on page, user info moved to the left
 - **reviews** with less characters per row
+- **options**
+  - show cover on the left
+  - make text wider
+  - hide elements from front page
 
 **WORKS BEST ON 1920x1080**
 

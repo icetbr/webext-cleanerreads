@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "CleanerReads - A Goodreads Theme",
-    "version": "1.1.1",
+    "version": "1.2.0",
 
     "description": "Nothing removed, just muted or moved out of the way.",
     "homepage_url": "https://github.com/icetbr/webext-cleanerreads",
@@ -26,9 +26,21 @@
     "content_scripts": [
         {
             "matches": ["https://www.goodreads.com/*"],
-            "js": ["content.js"]
+            "js": ["content.js"],
+            "run_at": "document_start"
         }
-    ]
+    ],
+
+    "options_ui": {
+        "page": "options.html"
+    },
+
+    "browser_action": {
+        "default_popup": "options.html",
+        "browser_style": true
+    },
+
+    "permissions": ["storage", "activeTab"]
 }
 
 
