@@ -27,6 +27,7 @@ Muting and moving some UI elements in favor of text. Nothing is removed, just re
   - show cover on the left
   - make text wider
   - hide elements from front page
+  - move About Author and Readers Also Enjoyed to the sidebar
 
 **WORKS BEST ON 1920x1080**
 

@@ -1,6 +1,8 @@
 export const state = {
     showCoverOnTheLeft: false,
     removeBookCoverRoundedCorners: false,
+    moveAboutTheAuthorToTheSidebar: false,
+    moveReadersAlsoEnjoyedToTheSidebar: false,
     makeTextWider: false,
     CurrentlyReading: false,
     ReadingChallenge: false,

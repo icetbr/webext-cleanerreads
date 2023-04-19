@@ -1,1 +1,3 @@
-.BookPageMetadataSection__ratingStats { position: absolute; left: -334px; top: 344px; }                /* move to the sidebar */
+.BookPageMetadataSection__ratingStats          { position: absolute; left: -334px; top: 344px; }                /* move to the sidebar */
+.BookPage__rightColumn                         { grid-column-start: 4; grid-column-end: 11; grid-row-start: 1; }       /* make non sticky */
+.DetailsLayoutRightParagraph__widthConstrained { grid-column: span 8; }

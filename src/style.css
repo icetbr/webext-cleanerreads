@@ -170,3 +170,5 @@ hr.Divider { width: 532px }
 .ButtonGroup .Button__container:not(:first-child) .Button:active, .ButtonGroup .Button__container:not(:first-child) .Button--buy:focus {
   box-shadow: inset 0 -3px 0 0 var(--color-text-button-transparent-base);
 }
+
+.BookPage__bookCover { margin-bottom: 165px !important }; /* needed for content moved to the sidebar */
