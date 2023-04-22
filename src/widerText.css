@@ -2,3 +2,4 @@
 .BookPage__mainContent .TruncatedContent:nth-child(3) { width: 700px; }                                 /* author description */
 .MyReviewCard__content { width: 700px; }
 .ReviewCard__content { width: 700px; }
+.BookPageMetadataSection__description .TruncatedContent__text { overflow: visible !important; }

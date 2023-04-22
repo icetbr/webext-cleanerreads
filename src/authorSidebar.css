@@ -3,4 +3,10 @@
 .BookPage__leftColumn .lazyload-wrapper             { font-size: 14px; width: 320px; }
 .BookPage__leftColumn .PageSection .Divider,
 .BookPage__leftColumn .lazyload-wrapper .Divider    { width: 305px; }
-.AuthorPreview .FeaturedPerson__infoPrimary         { width: 305px; }
+.AuthorPreview .FeaturedPerson__infoPrimary         { width: 250px; }
+.ContributorLinksList { font-size: 1.2rem; }
+.ContributorLink__role { font-size: 1.0rem; }
+.FeaturedPerson__profile { overflow: scroll }
+.DetailsLayoutRightParagraph__widthConstrained {  grid-column: span 10;  }
+
+
