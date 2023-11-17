@@ -31,6 +31,9 @@ Muting and moving some UI elements in favor of text. Nothing is removed, just re
 
 **WORKS BEST ON 1920x1080**
 
+## TODO
+- changelog popup
+
 [Contributing](https://github.com/icetbr/my-projects/blob/main/CONTRIBUTING.md)\
 [License (MIT)](https://choosealicense.com/licenses/mit/)
 
