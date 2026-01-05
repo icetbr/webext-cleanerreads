@@ -147,4 +147,4 @@ const
         await styleOptionals()
     }
 
-await waitForEl('body').then(init)
+waitForEl('body').then(init)
