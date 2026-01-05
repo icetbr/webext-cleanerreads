@@ -8,7 +8,7 @@ Muting and moving some UI elements in favor of text. Nothing changed, just rearr
 ![After](media/after.png)
 
 ### Settings
-![After](media/settings.png)
+![Settings](media/settings.png)
 
 ## Install
 [Userstyle][4] - [Userscript][1] - [Firefox][2] - [Chrome][3].
