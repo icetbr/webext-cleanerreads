@@ -1,9 +1,10 @@
 {
-    "manifest_version": 2,
+    "$schema": "https://json.schemastore.org/chrome-manifest",
+    "manifest_version": 3,
     "name": "CleanerReads - A Goodreads Theme",
-    "version": "1.3.1",
+    "version": "1.4.0",
 
-    "description": "Nothing removed, just muted or moved out of the way.",
+    "description": "Muting and moving some UI elements in favor of text. Nothing changed, just rearranged.",
     "homepage_url": "https://github.com/icetbr/webext-cleanerreads",
     "author": "icetbr",
 
@@ -17,7 +18,10 @@
 
     "browser_specific_settings": {
         "gecko": {
-          "id": "webext-webext-cleanerreads@icetbr"
+          "id": "webext-webext-cleanerreads@icetbr",
+          "data_collection_permissions": {
+              "required": ["none"]
+          }
         },
         "addonIds": ["cleanerreads", "cleanerreads/pfckicghmjgghmoeolegcbccjekhejji"],
         "keywords": ["userstyle", "goodreads", "minimalist"]
@@ -29,18 +33,7 @@
             "js": ["content.js"],
             "run_at": "document_start"
         }
-    ],
-
-    "options_ui": {
-        "page": "options.html"
-    },
-
-    "browser_action": {
-        "default_popup": "options.html",
-        "browser_style": true
-    },
-
-    "permissions": ["storage", "activeTab"]
+    ]
 }
 
 

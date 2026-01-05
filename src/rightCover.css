@@ -1,4 +1,0 @@
-.BookPage__leftColumn           { grid-column-start: 10; grid-column-end: 13; }                         /* move to the right */
-.BookPage__rightColumn          { grid-column-start: 3; grid-column-end: 10; grid-row-start: 1; }       /* make non sticky */
-
-.BookPageMetadataSection__ratingStats { position: absolute; right: -314px; top: 344px; }                /* move to the sidebar */

@@ -1,0 +1,6 @@
+{
+    "extends": "@icetbr/tsconfig",
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"]
+    }
+}

@@ -8,7 +8,7 @@
 
 .RatingStatistics                     { flex-flow: column wrap; align-items: center; }
 
-/*[Want to read], [Buy o nAmazon]*/
+/*[Want to read], [Buy on Amazon]*/
 .BookActions                     { position: absolute; top: 407px; left: 72px; color: var(--color-text-subdued); }
 .BookActions__editActivityButton { display: none; }
 
@@ -39,7 +39,7 @@ input::placeholder              { color: #0000005c; }
 .HeaderSearch__button           { opacity: 0.3; }
 .Text__title3                   { font-size: 1.5rem; }  /* Book Series title */
 .HeaderSecondaryNav             { right: 43px; }        /* align second nav icons with cover */
-
+.HeaderNavDropdown              { z-index: 9999 }       /* .Header position uset made this go to the back */
 
 /*****************/
 /*  MAIN         */
@@ -61,7 +61,7 @@ input::placeholder              { color: #0000005c; }
 .BookDetails__list                                          { margin-top: 35px; }      /* "This Edition" overlaping when fewer details displayed. Ex: https://www.goodreads.com/book/show/60741407-a-christmas-memory */
 
 
-/* 1,004 reading · 11.4k want to read */
+/* 1,004 reading Â· 11.4k want to read */
 .AvatarGroup                          { display: none; }
 .SocialSignalsSection                 { color: var(--color-text-body-light); }
 .SocialSignalCard__caption            { margin-left: unset; }
@@ -74,6 +74,8 @@ input::placeholder              { color: #0000005c; }
 .PageSection__title                                         { display: none; }
 .PageSection                                                { margin-top: 20px; width: 550px;}
 .PageSection .DetailsLayoutRightParagraph__widthConstrained { grid-column: span 10; }
+.PageSection .Divider,
+.lazyload-wrapper .Divider    { width: 693px; }
 
 
 /*****************/
@@ -103,6 +105,8 @@ input::placeholder              { color: #0000005c; }
 /* user reviews gravatar to the left, content centered */
 #ReviewsSection .ReviewCard                                           { left: -190px; width: 720px;}
 
+#ReviewsSection > .Divider                                              { width: 693px;}
+
 .FeaturedPerson__info                                                 { width: 515px; }
 
 .TruncatedContent__text--large                                        { max-height: 48rem; }
@@ -125,7 +129,7 @@ div[data-testid="actions"]                                            { margin-l
   hyphens: auto;
 }
 
-hr.Divider { width: 532px }
+/* hr.Divider { width: 693px } */
 
 /*****************/
 /*    BUTTONS    */
@@ -171,4 +175,80 @@ hr.Divider { width: 532px }
   box-shadow: inset 0 -3px 0 0 var(--color-text-button-transparent-base);
 }
 
-.BookPage__bookCover { margin-bottom: 200px !important }; /* needed for content moved to the sidebar */
+.BookPage__bookCover { margin-bottom: 200px !important } /* needed for content moved to the sidebar */
+
+/* .BookPageMetadataSection__genreButton { padding: 0 4px 0px 0; } */
+.BookPageMetadataSection__genreButton a { height: 30px; }
+.Button--tag:after, .Button--tag:before { bottom: 3px }
+
+/*****************/
+/* Conditionals  */
+/*****************/
+
+/* coverOnLeft */
+body.coverOnLeft .BookPageMetadataSection__ratingStats          { position: absolute; left: -334px; top: 344px; }                /* move to the sidebar */
+body.coverOnLeft .BookPage__rightColumn                         { grid-column-start: 4; grid-column-end: 11; grid-row-start: 1; }       /* make non sticky */
+body.coverOnLeft .BookPage__leftColumn                          { margin-left: -44px; }
+body.coverOnLeft .DetailsLayoutRightParagraph__widthConstrained { grid-column: span 8; }
+
+/* coverOnRight */
+body.coverOnRight .BookPageMetadataSection__ratingStats { position: absolute; right: -314px; top: 344px; }                /* move to the sidebar */
+body.coverOnRight .BookPage__leftColumn           { grid-column-start: 10; grid-column-end: 13; }                         /* move to the right */
+body.coverOnRight .BookPage__rightColumn          { grid-column-start: 3; grid-column-end: 10; grid-row-start: 1; }       /* make non sticky */
+
+
+/* authorToTheSidebar */
+/* when loading, the author section is called PageSection, after loading it is .lazyload-wrapper */
+body.authorToTheSidebar .BookPage__leftColumn .PageSection,
+body.authorToTheSidebar .BookPage__leftColumn .lazyload-wrapper             { font-size: 14px; width: 320px; }
+body.authorToTheSidebar .BookPage__leftColumn .PageSection .Divider,
+body.authorToTheSidebar .BookPage__leftColumn .lazyload-wrapper .Divider    { width: 305px; }
+body.authorToTheSidebar .AuthorPreview .FeaturedPerson__infoPrimary         { width: 250px; }
+body.authorToTheSidebar .ContributorLinksList { font-size: 1.2rem; }
+body.authorToTheSidebar .ContributorLink__role { font-size: 1.0rem; }
+/* body.authorToTheSidebar .FeaturedPerson__profile { overflow: scroll } */
+body.authorToTheSidebar .DetailsLayoutRightParagraph__widthConstrained {  grid-column: span 10;  }
+
+
+/* muteTopbar */
+/* OLD TOPBAR */
+body.muteTopbar .siteHeader__topLine       { position: unset; box-shadow: unset; background: unset }
+body.muteTopbar .siteHeader .siteHeader__topLevelLink, .siteHeader .primaryNavMenu__trigger {  color: #00000021; }
+body.muteTopbar .siteHeader input          { border: 0.1rem solid #0000; }
+body.muteTopbar .siteHeader .searchBox__icon--magnifyingGlass { opacity: 0.3; }
+body.muteTopbar .siteHeader input::placeholder              { color: #0000005c !important; }
+body.muteTopbar .siteHeader { position: unset; }
+body.muteTopbar .siteHeaderBottomSpacer { display: none }
+
+/* widerText */
+body.widerText .BookPageMetadataSection__description .DetailsLayoutRightParagraph__widthConstrained { width: 690px; }  /* book description */
+body.widerText .BookPage__mainContent .TruncatedContent:nth-child(3) { width: 700px; }                                 /* author description */
+body.widerText .MyReviewCard__content { width: 700px; }
+body.widerText .ReviewCard__content { width: 700px; }
+body.widerText .BookPageMetadataSection__description .TruncatedContent__text { overflow: visible !important; }
+
+/* readersEnjoyedToTheSidebar */
+body.readersEnjoyedToTheSidebar .BookPage__relatedTopContent .DynamicCarousel__item { margin-right: 0px; }
+body.readersEnjoyedToTheSidebar .BookPage__relatedTopContent  .BookCard__content  { display: none }
+body.readersEnjoyedToTheSidebar .BookPage__relatedTopContent  .Divider  { display: none }
+
+body.coverOnLeft.authorToTheSidebar.readersEnjoyedToTheSidebar .MyReviewCard__profile > .ReviewerProfile {    margin-left: 950px;    position: absolute; }
+
+/* sharpCorners */
+body.sharpCorners .BookCover__image { border-radius: unset }
+
+body.hide-CurrentlyReading section:has([data-react-class="ReactComponents.CurrentlyReading"]),
+body.hide-ReadingChallenge section:has([data-react-class="ReactComponents.ReadingChallenge"]),
+body.hide-ShelfDisplay section:has([data-react-class="ReactComponents.ShelfDisplay"]),
+body.hide-UserShelvesBookCounts section:has([data-react-class="ReactComponents.UserShelvesBookCounts"]),
+body.hide-EditorialBlogThumbnail section:has([data-react-class="ReactComponents.EditorialBlogThumbnail"]),
+body.hide-RecommendationsWidget section:has([data-react-class="ReactComponents.RecommendationsWidget"]),
+body.hide-ChoiceWidget section:has([data-react-class="ReactComponents.ChoiceWidget"]),
+body.hide-Footer [data-react-class="ReactComponents.Footer"],
+body.hide-SiteAnnouncement [data-react-class="ReactComponents.SiteAnnouncement"],
+body.hide-GoogleBannerAd .Ad,
+body.hide-ColoredTopBar .SiteHeaderBanner__topFullImageContainer,
+body.hide-ColoredTopBar .siteHeader__topFullImageContainer
+{
+    display: none !important;
+}
