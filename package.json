@@ -8,8 +8,8 @@
         "@icetbr/publish": "^1.0.0",
         "@icetbr/rollup-config-webext": "^1.0.0",
         "@icetbr/run-config": "^1.0.0",
-        "@icetbr/utils": "^1.0.0",
         "@icetbr/tsconfig": "^1.0.0",
+        "@icetbr/utils": "^1.0.0",
         "@samrum/vite-plugin-web-extension": "^5.1.1",
         "@types/chrome": "^0.1.32",
         "@types/firefox-webext-browser": "^143.0.0",
@@ -17,6 +17,7 @@
         "@types/webextension-polyfill": "^0.12.4",
         "chrome-webstore-upload-cli": "^3.5.0",
         "typescript": "^5.9.3",
+        "vite": "^7.3.0",
         "vite-plugin-monkey": "^7.1.1",
         "vite-plugin-node-polyfills": "^0.24.0",
         "web-ext": "^9.2.0"

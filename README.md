@@ -35,10 +35,11 @@ Muting and moving some UI elements in favor of text. Nothing changed, just rearr
 
 ## Changelog
 - v1.4.0
-    - option button now in the top right corner cog **⚙** button
     - a lot of the code changed, please let me know if I broke something
+    - option button now in the top right corner cog **⚙** button
     - fix "category underlines cross out the category names"
     - fix "Readers also enjoyed not actually moving to the sidebar"
+    - fix menu (browser, community) opacity
 
 ## Contributing
 See [here](node_modules/@icetbr/run-config/common.sh) for dev scripts

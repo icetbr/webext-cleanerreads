@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/chrome-manifest",
     "manifest_version": 3,
     "name": "CleanerReads - A Goodreads Theme",
-    "version": "1.4.0",
+    "version": "1.4.1",
 
     "description": "Muting and moving some UI elements in favor of text. Nothing changed, just rearranged.",
     "homepage_url": "https://github.com/icetbr/webext-cleanerreads",
